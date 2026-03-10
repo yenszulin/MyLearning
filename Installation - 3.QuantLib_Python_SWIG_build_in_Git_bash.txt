@@ -1,0 +1,41 @@
+git clone https://github.com/lballabio/QuantLib-SWIG.git
+cd QuantLib-SWIG
+git checkout tags/v1.31
+cd Python
+
+Move to Python binding directory
+cd ~/QuantLib/QuantLib-SWIG/Python
+
+export QL_DIR=/c/Users/yensz/QuantLib/QuantLib
+export BOOST_ROOT=/c/local/boost_1_84_0
+export INCLUDE=$QL_DIR:$BOOST_ROOT
+export LIB=/c/local/boost_1_84_0/lib64-msvc-14.3;$LIB
+
+Clean previous builds
+rm -rf build
+rm -f QuantLib/_QuantLib*.pyd
+
+Build the Python extension
+python setup.py wrap
+python setup.py build 
+pip install -e . [ instead of  pip install -user . ]
+
+
+
+python_d setup.py build --debug
+python_d setup.py test
+python_d setup.py install  [ need to "python setup.py install --user . " for admin right issue ]
+
+
+
+
+
+export PATH="/c/Users/yensz/AppData/Local/Programs/Python/Python312:/c/Users/yensz/AppData/Local/Programs/Python/Python312/Scripts:$PATH"
+
+
+C:\Users\yensz\AppData\Local\Microsoft\WindowsApps\python.exe
+
+
+
+
+
