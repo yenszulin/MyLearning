@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/55809942/how-to-debug-quantlib-python-module-in-visual-studio
+
+https://quantnet.com/threads/quantlib-python.30411/
+

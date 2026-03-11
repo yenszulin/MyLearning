@@ -1,0 +1,37 @@
+1. Get QuantLib
+
+git clone --branch v1.31 https://github.com/lballabio/QuantLib.git
+cd QuantLib
+
+2. Build QuantLib
+mkdir build
+cd build
+# Adjust boost path if necessary
+cmake -G "Visual Studio 17 2022" -A x64 -DBOOST_ROOT=C:/local/boost_1_84_0 ..
+
+3. Build in Visual Studio:
+Open QuantLib.sln inside the build folder using Visual Studio 2022.
+Select Release and x64 configuration.
+Right-click the ALL_BUILD project in Solution Explorer and select "Build". 
+
+
+4. Verification
+Run the QuantLib-test-suite project within Visual Studio to ensure the installation is successful. 
+
+
+
+cmake -G "Visual Studio 17 2022" -A x64 -DUSE_STATIC_BOOST=ON -DBOOST_ROOT="C:/local/boost_1_84_0" -DWITH_TESTS=ON
+
+
+
+
+C:\ProgramData\chocolatey\lib\swig\tools\install\swigwin-4.3.1\Lib
+
+cmake .. ^
+-DQL_ENABLE_TEST_SUITE=OFF ^
+-DBOOST_ROOT=C:\boost_1_82_0 ^
+-DBoost_NO_SYSTEM_PATHS=ON ^
+-G "Visual Studio 17 2022"
+
+
+
